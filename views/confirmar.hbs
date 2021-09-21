@@ -1,0 +1,107 @@
+{{#if data}} 
+  <div class="row">
+
+          <div class="container">
+              <header class="header">
+                <h1 id="title" class="text-center">Pide tu Hamburguesa aquí</h1>
+                <p id="description" class="description text-center">
+                  Gracias por confiar en la mejor hamburguesa del Perú!
+                </p>
+              </header>
+
+              <form action="/confirmarpedido" method="post" role="form" id="survey-form">
+
+                <div class="form-group">
+                      <label>Haz elegido el tipo de Hamburguesa : </label>
+                      <li>{{data.tipoHamburguesa}}</li>
+                </div>
+
+                <div class="form-group">
+                  <label id="cantidad-label" for="cantidad">Cantidad : </label>
+                  <li>{{data.cantidad}}</li>
+                </div>
+
+            {{#if data.conPapasAndinas}} 
+                <div class="form-group">
+                  <label id="cantidad-label" for="cantidad">Con papas Andinas : </label>
+                  <li>Sí {{data.conPapasAndinas}}</li>
+                  {{!-- <li>Cantidad : {{data.cantidadPapas}}</li> --}}
+                </div>
+            {{else}}
+                <div class="form-group">
+                  <label id="cantidad-label" for="cantidad">Con papas Andinas : </label>
+                  <li>No {{data.conPapasAndinas}}</li>
+                  {{!-- <li>Cantidad : {{data.cantidadPapas}}</li> --}}
+                </div>
+            {{/if}}
+                <div class="form-group">
+                  <label>
+                    Estás quitando : 
+                  </label>
+
+                   <li>{{data.preferQuitar}}</li>
+
+                </div>
+
+                <div class="form-group">
+                  <p>
+                    Elige tus cremas : 
+                  </p>
+                  <li>{{data.preferCremas}}</li>
+                </div>
+
+                <div class="form-group">
+                  <p>
+                    Extras : 
+                  </p>
+                  <li>{{data.preferExtras}}</li>
+                </div>
+
+                <div class="form-group">
+                  <p>
+                    Elige tu Bebida : 
+                  </p>
+                  <li>{{data.preferBebida}}</li>
+                </div>
+
+                <div class="form-group">
+                  <label id="nombre-label" for="name">Tu nombre es : </label>
+                  <li>{{data.nombre}}</li>
+                </div>
+
+                <div class="form-group">
+                  <label id="direccion-label" for="name">Tu dirección es : </label>
+                  <li>{{data.direccion}}</li>
+                </div>
+
+                <div class="form-group">
+                  <label id="telefono-label" for="name">Tu teléfono es :</label>
+                  <li>{{data.telefono}}</li>
+                </div>
+
+                <div class="form-group">
+                  <label id="delivery-label" for="delivery"
+                    >Costo del Delivery</label>
+                    <li>s/.5,00</li>
+                </div>
+
+                <div class="form-group">
+
+                  <label id="precio-final-label" for="precio-final"
+                  >Precio Final : s/. {{calculoTotal}} </label>
+
+                </div>
+            
+                <div class="form-group">
+                  <button type="submit" id="submit" class="submit-button">
+                    Confirmar Pedido
+                  </button>
+                </div>
+
+              </form>
+          </div>
+
+  </div>
+{{else}}
+
+{{/if}}

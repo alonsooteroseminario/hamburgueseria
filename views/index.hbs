@@ -1,0 +1,273 @@
+
+<div class="row">
+
+		<!-- <a class="cart-icon">
+			<span id="totalItems">0</span>
+			<ul class="cart"></ul>
+		</a> -->
+        <!-- <div class="container">
+            <div class="productosWrapper large-12 columns">
+        
+            </div>
+        </div> -->
+        <div class="container">
+            <header class="header">
+              <h1 id="title" class="text-center">Pide tu Hamburguesa aquí</h1>
+              <p id="description" class="description text-center">
+                Gracias por confiar en la mejor hamburguesa del Perú!
+              </p>
+            </header>
+
+            <form action="/hacerpedido" method="post" role="form" id="survey-form">
+
+              <div class="form-group">
+                    <p>Elige tu hamburguesa</p>
+                    <select id="dropdown" name="tipoHamburguesa" class="form-control" required>
+                      <option disabled selected value>Selecciona aquí</option>
+                      <option value="Burger">Burger --> s/. 11,00</option>
+                      <option value="Cheese">Cheese --> s/. 12,50</option>
+                      <option value="Bacon">Bacon --> s/. 13,50</option>
+                      <option value="Haw">Haw --> s/. 15,00</option>
+                      <option value="Royal">Royal --> s/. 15,50</option>
+                      <option value="Doble">Doble --> s/. 16,50</option>
+                      <option value="Papa Andina Fritas">Papa Andina  fritas --> s/. 4,50</option>
+                    </select>
+              </div>
+
+              <div class="form-group">
+                <label id="cantidad-label" for="cantidad">Cantidad</label>
+                <input name="cantidad" type="number" min="0" max="100">
+              </div>
+
+              <div class="form-group">
+                <p>
+                  Incluir Papas Andinas
+                </p>
+          
+                <label>
+                  <input
+                    name="conPapasAndinas"
+                    value=" Papa-Andina-fritas"
+                    type="checkbox"
+                    class="input-checkbox"
+                  />Sí --> s/. 4,50</label>
+                  {{!-- <label id="cantidad-label" for="cantidad">Cantidad de papas</label>
+                  <input name="cantidadPapas" type="number" min="0" max="100"> --}}
+              </div>
+
+              <div class="form-group">
+                <p>
+                  ¿Deseas quitar algo?
+                  <span class="clue">(Revisa todo lo que aplica)</span>
+                </p>
+          
+                <label
+                  ><input
+                    name="preferQuitar"
+                    value=" Sin-tomate"
+                    type="checkbox"
+                    class="input-checkbox"
+                  />Sin tomate</label
+                >
+                <label>
+                  <input
+                    name="preferQuitar"
+                    value=" Sin-lechuga"
+                    type="checkbox"
+                    class="input-checkbox"
+                  />Sin lechuga</label
+                >
+                <label
+                  ><input
+                    name="preferQuitar"
+                    value=" Sin-papas-al-hilo"
+                    type="checkbox"
+                    class="input-checkbox"
+                  />Sin papas al hilo</label
+                >
+                
+              </div>
+
+              <div class="form-group">
+                <p>
+                  Elige tus cremas
+                  <span class="clue">(Revisa todo lo que aplica)</span>
+                </p>
+          
+                <label
+                  ><input
+                    name="preferCremas"
+                    value=" Kepchut"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Kepchut</label
+                >
+                <label>
+                  <input
+                    name="preferCremas"
+                    value=" Mostaza"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Mostaza</label
+                >
+                <label
+                  ><input
+                    name="preferCremas"
+                    value=" Mayonesa"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Mayonesa</label
+                >
+                <label
+                  ><input
+                    name="preferCremas"
+                    value=" Ají"
+                    type="checkbox"
+                    class="input-checkbox"
+                    /> Ají</label
+                >
+                <label
+                ><input
+                  name="preferCremas"
+                  value=" Aceituna"
+                  type="checkbox"
+                  class="input-checkbox"
+                  /> Aceituna</label
+              >
+                
+              </div>
+
+              <div class="form-group">
+                <p>
+                  Extras
+                  <span class="clue">(Revisa todo lo que aplica)</span>
+                </p>
+          
+                <label
+                  ><input
+                    name="preferExtras"
+                    value=" Queso"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Queso --> s/. 1,50</label
+                >
+                <label>
+                  <input
+                    name="preferExtras"
+                    value=" Jamon"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Jamón --> s/. 1,50</label
+                >
+                <label
+                  ><input
+                    name="preferExtras"
+                    value=" Tocino"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Tocino --> s/. 2,50</label
+                >
+                <label
+                  ><input
+                    name="preferExtras"
+                    value=" Huevo"
+                    type="checkbox"
+                    class="input-checkbox"
+                    /> Huevo --> s/. 2,00</label
+                >
+                <label
+                ><input
+                  name="preferExtras"
+                  value=" Piña"
+                  type="checkbox"
+                  class="input-checkbox"
+                  /> Piña --> s/. 1,50</label
+              >
+                
+              </div>
+
+              <div class="form-group">
+                <p>
+                  Elige tu Bebida
+                  <span class="clue">(Revisa todo lo que aplica)</span>
+                </p>
+          
+                <label
+                  ><input
+                    name="preferBebida"
+                    value=" 7up"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> 7up --> s/. 2,00</label
+                >
+                <label>
+                  <input
+                    name="preferBebida"
+                    value=" Pepsi"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> Pepsi --> s/. 2,00</label
+                >
+                <label
+                  ><input
+                    name="preferBebida"
+                    value=" Con-pina"
+                    type="checkbox"
+                    class="input-checkbox"
+                  /> con piña --> s/. 2,00</label
+                >
+                
+              </div>
+
+              <div class="form-group">
+                <label id="nombre-label" for="name">Nombre</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  class="form-control"
+                  placeholder="Ej. Juan Peréz"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label id="direccion-label" for="name">Ingrese dirección</label>
+                <input
+                  type="text"
+                  name="direccion"
+                  id="direccion"
+                  class="form-control"
+                  placeholder="Ingresa tu dirección"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label id="telefono-label" for="name">Ingrese número de teléfono</label>
+                <input
+                  type="text"
+                  name="telefono"
+                  id="telefono"
+                  class="form-control"
+                  placeholder="Ingrese número de teléfono"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label id="delivery-label" for="delivery"
+                  >Costo del Delivery --> s/. 5,00</label
+                >
+              </div>
+          
+              <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  Hacer Pedido
+                </button>
+              </div>
+
+            </form>
+        </div>
+
+</div>
